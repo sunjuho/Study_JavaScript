@@ -10,7 +10,19 @@
 .aqua{color: #0ff;}
 </style>
 <script>
+    for(var i = 1; i < 100; i++){
+        if(i % 5 == 0 && i % 7 != 0){
+            document.write("<p class=red>", i , "</p><br>");
 
+        }else if(i % 7 == 0 && i % 5 != 0){
+            document.write("<p class=green>", i , "</p><br>");
+        
+        }else if(i % 5 == 0 && i % 7 == 0){
+            document.write("<p class=aqua>", i , "</p><br>");
+            
+        }
+
+    }
 </script>
 </head>
 <body>
