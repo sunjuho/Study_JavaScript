@@ -6,7 +6,11 @@
 <script>
 	var num = 0;
 	function testFnc(){
+		num++;
 
+		document.write(num + "<BR>");
+		if(num == 10) return;
+		testFnc();
 	}
 	
 	testFnc();
