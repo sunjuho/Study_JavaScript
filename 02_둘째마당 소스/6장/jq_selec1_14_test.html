@@ -6,7 +6,8 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-
+	$(".txt1").parents().css({"border":"2px solid blue"}); // 모든 parents
+	$(".txt2").parents("div").css("border", "3px dotted red"); // div parents.
 });
 </script>
 </head>
