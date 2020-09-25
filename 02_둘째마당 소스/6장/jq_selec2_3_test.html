@@ -6,7 +6,9 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#menu li").eq(2).css({"background-color":"red"}); // 2는 3번째.
+	$("#menu li:lt(2)").css({"background-color":"blue"}); // less than 2. $().lt()는 불가.
+	$("#menu li:gt(2)").css({"background-color":"green"}); // greater than 2. $().gt()는 불가.
 });
 </script>
 </head>

@@ -6,7 +6,10 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#menu1 li:nth-child(1)").css({"background-color":"red"}); // menu1의 하위 li 중 첫 번째.
+	$("#menu1 li:nth-child(2n)").css({"background-color":"aqua"});
+
+	$("#menu2 li:nth-last-child(2)").css({"background-color":"yellow"}); // 뒤에서 두 번째.
 });
 </script>
 </head>
