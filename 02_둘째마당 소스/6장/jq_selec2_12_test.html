@@ -6,8 +6,21 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#wrap p:hidden").css({"display":"block","background":"#ff0"}); // 숨겨진 p를 보이게.
+
+	var z1 = $("#zone1 :selected").val(); // option selected.
+	console.log(z1);
+
+	var z2 = $("#zone2 :checked").val(); // checkbox checked.
+	console.log(z2);	
+
+	var z3 = $("#zone3 :checked").val(); // rediobutton checked.
+	console.log(z3);
 });
+
+function as(){
+	console.log($('#zone1 :selected').val())
+};
 </script>
 </head>
 <body>
@@ -24,6 +37,8 @@ $(function(){
 				<option value="opt3">옵션3</option>
 		</select>
 		</p>
+
+	<p><input type="button" onclick="as()" value="로그"></button></p>
 		<p id="zone2">
 				<input type="checkbox" name="hobby1" value="독서"> 독서
 				<input type="checkbox" name="hobby2" value="자전거"> 자전거

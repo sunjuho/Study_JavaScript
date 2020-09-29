@@ -6,7 +6,17 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$("#wrap a[target]").css("color","#f00"); // a 중 target 속성을 가진 태그.
+
+	$("#wrap a[href^=https]").css("color","green"); // a 중 href의 시작이 https인 태그.
+
+	$("#wrap a[href$='net']").css("color","yellow"); // a 중 href의 끝이 net인 태그.
+
+	$("#wrap a[href*='google']").css("color","#f0f"); // a 중 href에 google이 있는 태그.
+
+	$("#member_f :text").css({"background-color":"red"}); // 중간에 반드시 공백 필요. #member_f 중 type이 text인 태그.
+
+	$("#member_f :password").css({"background-color":"blue"}); //  #member_f 중 type이 password인 태그.
 });
 </script>
 </head>
@@ -14,8 +24,8 @@ $(function(){
 	<div id="wrap">
 		<p><a href="http://easyspub.co.kr" target="_blank">EasysPub</a></p>
 		<p><a href="https://naver.com">Naver</a></p>
-		<p><a href="http://daum.net">Google</a></p>
-		<p><a href="http://google.co.kr">Daum</a></p>
+		<p><a href="http://daum.net">Daum</a></p>
+		<p><a href="http://google.co.kr">Google</a></p>
 	</div>
 	<form action="#" method="get" id="member_f">
 		<p>

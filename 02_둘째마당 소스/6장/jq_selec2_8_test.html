@@ -20,6 +20,25 @@ $(function(){
 			"name":"빅마마"
 		}];
   
+	var arr2 = $.map(arr1, function(a,b){
+		if(a.area == "서울"){
+			return a;
+		}
+	})
+
+	console.log(arr2);
+	console.log("----end----");
+
+	var arr3 = $.grep(arr1, function(a, b){
+		if(a.area == "서울"){
+			return true;
+		} else {
+			return false;
+		}
+	})
+
+	console.log(arr3);
+	console.log("----end----");
 });
 </script>
 </head>

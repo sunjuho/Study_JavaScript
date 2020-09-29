@@ -13,6 +13,19 @@ $(function(){
 			"area":"서울"
 	}
 	
+	var idxNum = $.inArray("부산", arr1); // "부산"이 arr1의 몇번째에 위치하는지.
+	console.log(idxNum);
+
+	var okArray1 = $.isArray(arr1);
+	var okArray2 = $.isArray(obj);
+
+	console.log(okArray1);
+	console.log(okArray2);
+
+	$.merge(arr1, arr2); // return void. arr1에 arr2를 합침.
+	console.log(arr1);
+	console.log(arr2); // arr2는 그대로.
+
 });
 </script>
 </head>
