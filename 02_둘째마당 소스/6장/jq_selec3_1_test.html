@@ -6,7 +6,16 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	var result_1 = $("#sec_1").html(); // 내부에 있는 요소 전체 가져옴.
+	console.log(result_1);
+
+	$("#sec_1").html("<a href=\"#\">text1</a>"); // 가져온 후 내용을 덮어씀.
+
+	var result_2 = $("#sec_2").text(); // <>태그를 제외한 내용의 전부.
+	console.log(result_2); 
+
+	$("#sec_2").text("text()"); // text()는 태그를 사용하지 않아서 그냥 문자열로만 바뀜.
+
 });
 </script>
 </head>
