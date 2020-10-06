@@ -6,7 +6,16 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	var result_1 = $("#chk1").prop("checked"); // checked 인지 T/F. checked or selected
+	console.log(result_1);
 
+	var result_2 = $("#chk2").prop("checked");
+	console.log("result_2 : ", result_2);
+
+	$("#chk3").prop("checked", true); // #chk3 의 값을 true로 설정.
+
+	var result_3 = $("#se_1").prop("selectedIndex"); // 선택된 것의 index값 구하기.
+	console.log("result_3 : ", result_3);
 });
 </script>
 </head>
