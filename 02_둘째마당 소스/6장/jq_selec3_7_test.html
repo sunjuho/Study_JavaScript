@@ -7,8 +7,18 @@
 <script>
 $(function( ){
 	var $txt1 = $(".txt_1 span"),
-					$txt2 = $(".txt_2 span"),
-					$box = $(".box");
+		$txt2 = $(".txt_2 span"),
+		$box = $(".box"); //내부 박스.
+
+	var off_t = $box.offset().top; // 문서로부터 top.
+	console.log(off_t);
+
+	var pos_t = $box.position().top; // 상위(기준이 되는) 요소로부터 top.
+	console.log(pos_t);
+
+	$txt1.text(off_t);
+	$txt2.text(pos_t);
+	
 });
 </script>
 <style>

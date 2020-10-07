@@ -6,6 +6,16 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	var w1 = $("#p1").width();
+	console.log("width : ", w1);
+
+	var w2 = $("#p1").innerWidth();
+	console.log("innerWidth : ", w2, " == width + padding");
+
+	var w3 = $("#p1").outerWidth();
+	console.log("outerWidth : ", w3, " == innerWidth + border");
+
+	$("#p2").outerWidth(100).outerHeight(100); // width가 50으로 줆.
 
 });
 </script>
