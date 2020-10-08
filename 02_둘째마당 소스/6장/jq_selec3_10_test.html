@@ -6,7 +6,9 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	$("<li>appendTo</li>").appendTo("#listZone"); // ul의 listzone에 추가.
 
+	$("#listZone").prepend("<li>prepend</li>"); // 제일 앞에 추가.
 });
 </script>
 </head>

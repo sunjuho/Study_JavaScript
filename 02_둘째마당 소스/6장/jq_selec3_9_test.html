@@ -6,6 +6,15 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	$("#wrap p:eq(2)").after("<p>After</p>"); // 세번째 p의 뒤에 문구 추가.
+	// a뒤에 b를 넣음.
+	$("<p>insert After</p>").insertAfter("#wrap p:eq(1)"); // 2번째 p 뒤에 삽입.
+	// a를 b뒤에 넣음.
+
+	$("#wrap p:eq(1)").before("<p>Before</p>");
+	$("#wrap p:eq(1)").before("<p>Before before</p>"); // 12행에서 만들어진 <p>가 p:eq(1)이 됨.
+
+	$("<p>insert before</p>").insertBefore("#wrap p:eq(0)");
 
 });
 </script>
