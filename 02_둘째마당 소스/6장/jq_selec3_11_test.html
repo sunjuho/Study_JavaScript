@@ -6,6 +6,13 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	var copyObj = $(".box1").children().clone();
+
+	$(".box2").remove(); // 전체 제거.
+
+	$(".box3").empty(); // 하위 제거.
+
+	$(".box3").append(copyObj);
 
 });
 </script>

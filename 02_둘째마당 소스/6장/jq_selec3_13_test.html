@@ -6,7 +6,13 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ){
+	$("strong").unwrap(); // strong 의 부모 요소인 h1를 제거.
 
+	$(".ct1").wrap("<div/>"); // .ct1를 각각 <div></div>로 감쌈. 형식 <div/>
+
+	$(".ct2").wrapAll("<div/>"); // .ct2를 한번에 <div>로 감쌈.
+
+	$("li").wrapInner("<h3/>"); // 모든 하위 요소를 다시 <h3>로 감쌈.
 });
 </script>
 <style>
