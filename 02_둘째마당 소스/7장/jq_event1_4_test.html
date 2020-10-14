@@ -6,7 +6,15 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
+	$(document).ready(function(){
+		var h1 = $(".img1").height();
+		console.log("ready().img1.height() : ", h1); // html에 전체 요소가 로딩되면.
+	});
 
+	$(window).load(function(){
+		var h2 = $(".img1").height();
+		console.log("load().img1.height() : ", h2); // 이미지가 완전히 로딩되면. 완전히 로딩된 이후이므로 높이가 있음.
+	});
 });
 </script>
 </head>

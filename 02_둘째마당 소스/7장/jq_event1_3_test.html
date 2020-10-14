@@ -6,6 +6,18 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
+	$(".btn1").click(function(){
+		$(".btn1").parent().next().css({"color":"#f00"});
+	});
+
+	$(".btn2").on({
+		"mouseover focus" : function(){
+			$(".btn2").parent().next().css({"color":"#0f0"});
+		}
+	});
+
+	$(".btn1").off("click"); // 그냥 off() 도 가능.
+	$(".btn2").off("mouseover focus"); // 하나만 입력하면 다른 하나로 인해 css() 동작함.ㅌ`
 
 });
 </script>
