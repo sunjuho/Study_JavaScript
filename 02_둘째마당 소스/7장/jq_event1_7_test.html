@@ -6,7 +6,13 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
+	$("#box_1").on("mouseout", function(){
+		$("#box_1").css({"background-color":"yellow"}); // mouseout. 요소마다 적용.
+	});
 
+	$("#box_2").on("mouseleave", function(){
+		$("#box_2").css({"background-color":"pink"}); // mouseleave. 범위에 적용.
+	});
 });
 </script>
 </head>

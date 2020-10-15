@@ -6,7 +6,18 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function( ) {
+	$(".btn1").on("click", function(e){
+		e.preventDefault(); //기본 이벤트를 차단.
+		$(".txt1").css({"color":"#ff0"});
+	}); //  a의 기본 이벤트를 막고 css 설정으로 변경.
 
+	$(".btn2").on("click", function(e){
+		$(".txt2").css({"background-color":"#0ff"});
+	}); // css()와 href 둘 다 동작.
+
+	$(".btn3").on("dblclick", function(){
+		$(".txt3").css({"background-color":"#0f0"});
+	});
 });
 </script>
 </head>
