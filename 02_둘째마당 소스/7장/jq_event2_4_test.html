@@ -6,7 +6,31 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(document).on("keydown", keyEventFnc); // 문서의 키가 눌릴때마다 이벤트 발생.
 
+	function keyEventFnc(e){ // 이벤트의 키코드를 읽어와서 표시.
+		var direct = "";
+
+		switch(e.keyCode){
+			case 37 :
+				direct = "LEFT";
+				break;
+			case 38 :
+				direct = "TOP";
+				break;
+			case 39 :
+				direct = "RIGHT";
+				break;
+			case 40 :
+				direct = "BOTTOM";
+				break;
+			default : direct = e.keyCode;
+		}
+
+		if(direct){
+			$("#user_id").val(direct);
+		}
+	}
 });
 </script>
 </head>
