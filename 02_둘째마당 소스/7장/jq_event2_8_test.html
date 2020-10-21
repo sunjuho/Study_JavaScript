@@ -6,7 +6,24 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".btn_1").on("mouseover focus", function(){
+		alert("hello");
+	});
 
+	$(document).on("mouseover focus", ".btn_2",function(){
+		alert("welcome");
+	});
+
+	var btn_2 = $("<p><button class=\"btn_2\">버튼2</button></p>");
+	$("#wrap").append(btn_2);
+
+	$(".del_1").on("click", function(){
+		$(".btn_1").off("mouseover"); // mouseover만 off 했기 때문에 tab을 활용한 focus는 동작.
+	});
+
+	$(".del_2").click(function(){
+		$(document).off("mouseover", ".btn_2"); // off("동작 이벤트", "대상")
+	});
 });
 </script>
 </head>

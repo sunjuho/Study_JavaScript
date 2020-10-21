@@ -6,6 +6,17 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".btn_1.on").on("mouseover focus", function(){ // .on을 반드시 붙여서 바로 뒤에 써야 함.
+		alert("hello!"); // js가 설정되던 시점에 .btn_1.on이 존재하지 않음.
+	});
+
+	$(".btn_1").addClass("on");
+
+	$(document).on("mouseover focus", ".btn_2.on", function(){ // 문서 내에서 .btn_2.on이라는 객체가. 없다가 생기더라도 동작.
+		alert("btn2!");
+	});
+
+	$(".btn_2").addClass("on");
 
 });
 </script>
