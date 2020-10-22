@@ -12,6 +12,23 @@
 $(function(){
 	var baseFontSize = 14;
 
+	$(".zoomBtnZone button").on("click", function(){
+		if($(this).hasClass("zoomOutBtn")){
+			if(baseFontSize > 8){
+				baseFontSize--;
+			}
+		} else if($(this).hasClass("zoomInBtn")){
+			if(baseFontSize < 20){
+				baseFontSize++;
+			}
+		} else {
+			baseFontSize = 14;
+		}
+
+		$(".fontSize").text(baseFontSize + "px");
+		$("#wrap").css("fontSize", baseFontSize + "px"); // on click 에 text와 css도 같이 있어야 클릭하면서 변경됨.
+
+	});
 });
 </script>
 </head>

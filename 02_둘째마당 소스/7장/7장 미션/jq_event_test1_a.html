@@ -16,14 +16,15 @@
 <script>
 $(function() {
 	var beforeMenu = null;
-	$().on(, function() {
+	$(".gnb li a").on("mouseover focus", function() {
 		if(beforeMenu) beforeMenu.css({background:"none"});
 		$(this).css({"background-color":"#0ff"});
 		beforeMenu = $(this);
-	});
-	$(".gnb").on(, function() {
+	}); // 다른 a로 이동하면 이전 a의 배경색 사라짐.
+
+	$(".gnb").on("mouseout blur", function() {
 		if(beforeMenu) beforeMenu.css({background:"none"});
-	});
+	}); // 다른 a로 이동하지 않아도 a에서 mouseout되면 배경색 사라짐.
 });
 </script>
 </head>
