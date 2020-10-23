@@ -6,7 +6,22 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
+	$(".btn1").on("click", function(){
+		$(".txt1").animate({
+			marginLeft : "500px",
+			fontSize : "30px"	
+		},
+		2000, "linear", function(){
+			alert("animate callback");
+		});
+	});
 
+	$(".btn2").on("click", function(){
+		$(".txt2").animate({
+			marginLeft : "+=50px"
+		},
+		1000);
+	});
 });
 </script>
 <style>
