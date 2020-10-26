@@ -6,7 +6,16 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function(){
-	
+	$(".txt1")
+	.animate({marginLeft : "200px"}, 1000)
+	.animate({marginTop : "200px"}, 1000)
+	.queue(function(){ // queue()는 기본적으로 queue()이후의 animate()가 취소됨.
+		$(this).css({background : "red"});
+		$(this).dequeue(); // queue()이후에는 dequeue()를 써야 이후의 animate()가 정상적으로 동작.
+	})
+	.animate({marginLeft : "0px"}, 1000)
+	.animate({marginTop : "0px"}, 1000);	
+
 });
 </script>
 <style>
