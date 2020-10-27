@@ -6,6 +6,17 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function() {
+	$(".txt1")
+	.animate({marginLeft:"100px"},1000)
+	.animate({marginLeft:"300px"},1000)
+	.animate({marginLeft:"400px"},1000);
+
+	$(".txt2")
+	.animate({marginLeft:"100px"},1000)
+	.animate({marginLeft:"300px"},1000)
+	.animate({marginLeft:"400px"},1000);
+
+	$(".txt2").clearQueue(); // 진행중인 marginLeft 100을 제외하고 이외의 함수는 제거.
 
 });
 </script>

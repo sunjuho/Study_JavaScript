@@ -9,6 +9,19 @@ $(function() {
 	var txt1 = $(".txt1");
 	var count = 1;
 
+	$(".goBtn").click(function(){
+		if(count < 10){
+			count++;
+			$(".txt1").animate({marginLeft : "+=10%"});
+		}
+	});
+
+	$(".backBtn").click(function(){
+		if(count > 1){
+			count--;
+			$(".txt1").animate({marginLeft : "-=10%"});
+		}
+	});
 });
 </script>
 <style>
