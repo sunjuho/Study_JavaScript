@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="css/jquery-ui.min.css">
 <script>
 $(function() {
-
+	$("#startDate").datepicker({
+		minDate:-1, // 하루 전부터
+		maxDate:"+1M" // 30일 이후 안에서만 선택 가능.
+	});
 });
 </script>
 </head>
