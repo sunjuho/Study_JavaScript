@@ -29,13 +29,25 @@
 <script src="js/jquery.cookie.js"></script>
 <script>
 $(function() {
+	if($.cookie("popup") == "none"){ // popup이라는 이름의 쿠키의 값이 none이면
+		$("#notice_wrap").hide(); // 숨김.
+	};
 
+	$(".closeBtn").on("click", function(){
+		if($("#expiresChk").is(":checked")){
+			$.cookie("popup", "none", { // 크롬은 쿠키 생성하려면 서버에 올려야 함. 익스에서는 동작. // 생성된 쿠키는 Application의 Cookies 항목에서 확인가능.
+				expires : 3,
+				path : "/"
+			});
+		};
+		$("#notice_wrap").fadeOut();
+	});
 });
 </script>
 </head>
 <body>
 	<div id="notice_wrap">
-		<img src="images/window_object_1.jpg" alt="공지사항">
+		<img src="images/pic_4.jpg" alt="공지사항">
 		<p class="closeWrap">
 			<input type="checkbox" name="expiresChk" id="expiresChk">
 			<label for="expiresChk">3일 동안 이 창 열지않기</label>
