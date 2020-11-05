@@ -6,7 +6,17 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function() {
+	$.fn.open = function(eventType, message){ // eventType과 message를 인자로 특정 이벤트일 때 알림.
+		var ts = $(this);
+		$.each(ts, function(i, o){
+			$(o).on(eventType, function(){
+				alert(message);
+			});
+		});
+	}
 
+	$(".btn1").open("mouseover", "welcome!");
+	$(".btn2").open("click", "hello!");
 });
 </script>
 </head>

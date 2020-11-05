@@ -13,7 +13,25 @@
 <script src="js/jquery.js"></script>
 <script>
 $(function() {
+	$.fn.extend({
+		faq : function(){
+			var ts = $(this);
+			$.each(ts, function(i, o){ // 각각의 갯수만큼 함수 실행.
+				$("button", o).on("click", function(){ // faq()에 있는 요소만큼 이벤트 매서드 등록.
+					if($(this).parent().next().is(":hidden")){
+						$("li > div :visible", o).hide();
+						$(this).parent().next().show();
 
+					} else {
+						$("li > div :visible", o).hide();
+
+					}
+				});
+			});
+		}
+	});
+
+	$(".faq").faq();
 });
 </script>
 </head>
