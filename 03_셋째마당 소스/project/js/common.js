@@ -1,6 +1,6 @@
 (function(win, $){
 	var $html = $("html");
-	var deviceSize = {
+	var deviceSize = { // 디바이스별 사이즈 기준 설정.
 		pc:1009,
 		tablet:801,
 		mobile:800
@@ -23,8 +23,8 @@
 	//console.log(deviceSize.pc);
 
 	$(win).on("resize", function() {
-		var w_size = $(win).width();
-		if(w_size >= deviceSize.pc 
+		var w_size = $(win).width(); // 너비가 변하면 새 값으로.
+		if(w_size >= deviceSize.pc // pc기준 사이즈보다 클 때.
 		&& !$("html").hasClass("pc")) {
 			$html.removeClass("mobile tablet").addClass("pc");
 			scrollShowHide("scroll");
@@ -47,11 +47,11 @@
 					$(win).trigger("resize");
 
 					$(document).on("mouseover focus",
-					".pc #gnb>ul>li>a, .tablet #gnb>ul>li>a", 
+					".pc #gnb>ul>li>a, .tablet #gnb>ul>li>a",  // 올리면 보이게.
 					gnbPlay);
 
 					$(document).on("click",
-					".mobile #gnb>ul>li:not(.no-sub)>a", 
+					".mobile #gnb>ul>li:not(.no-sub)>a", // 모바일에선 클릭하면 슬라이드로 호출.
 					gnbPlay);
 					
 					function gnbPlay() {
